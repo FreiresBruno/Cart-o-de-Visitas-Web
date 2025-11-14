@@ -133,6 +133,12 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 50px;
 }
+.aviso {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
 
 .projetos-caixa {
   display: grid;
@@ -372,4 +378,20 @@ h1 {
     width: 2.5rem;
     transform: translateY(1px) translateX(2px);
   }
+}
+.projeto-link1{
+  text-decoration: none;  /* remove o sublinhado */
+  color: inherit;         /* mantém a cor original do texto */
+  display: block;         /* o link ocupa toda a área do card */
+
+}
+.projeto-link2{
+  text-decoration: none;  /* remove o sublinhado */
+  color: inherit;         /* mantém a cor original do texto */
+  display: block;         /* o link ocupa toda a área do card */
+}
+.projeto-link3{
+  text-decoration: none;  /* remove o sublinhado */
+  color: inherit;         /* mantém a cor original do texto */
+  display: block;         /* o link ocupa toda a área do card */
 }
