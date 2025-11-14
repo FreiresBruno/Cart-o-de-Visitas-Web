@@ -139,7 +139,6 @@ h1 {
   margin-bottom: 50px;
 }
 
-
 .projetos-caixa {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -379,19 +378,81 @@ h1 {
     transform: translateY(1px) translateX(2px);
   }
 }
-.projeto-link1{
-  text-decoration: none;  /* remove o sublinhado */
-  color: inherit;         /* mantém a cor original do texto */
-  display: block;         /* o link ocupa toda a área do card */
+.projeto-link1 {
+  text-decoration: none; /* remove o sublinhado */
+  color: inherit; /* mantém a cor original do texto */
+  display: block; /* o link ocupa toda a área do card */
+}
+.projeto-link2 {
+  text-decoration: none; /* remove o sublinhado */
+  color: inherit; /* mantém a cor original do texto */
+  display: block; /* o link ocupa toda a área do card */
+}
+.projeto-link3 {
+  text-decoration: none; /* remove o sublinhado */
+  color: inherit; /* mantém a cor original do texto */
+  display: block; /* o link ocupa toda a área do card */
+}
+/* BOTÃO HAMBÚRGUER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
 
+.hamburger span {
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  transition: 0.3s;
 }
-.projeto-link2{
-  text-decoration: none;  /* remove o sublinhado */
-  color: inherit;         /* mantém a cor original do texto */
-  display: block;         /* o link ocupa toda a área do card */
+
+/* MENU NORMAL */
+.navegacao .menu {
+  display: flex;
+  gap: 20px;
 }
-.projeto-link3{
-  text-decoration: none;  /* remove o sublinhado */
-  color: inherit;         /* mantém a cor original do texto */
-  display: block;         /* o link ocupa toda a área do card */
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navegacao .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.3s ease-in-out;
+    z-index: 1500;
+  }
+
+  .navegacao .menu.active {
+    right: 0;
+  }
+
+  /* Animação do X */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
 }

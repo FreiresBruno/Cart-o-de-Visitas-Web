@@ -76,11 +76,21 @@ body {
   font-weight: bold;
 }
 
-.sobre-caixa h1 { font-size: 2.4rem; }
-.sobre-caixa h2 { font-size: 1.9rem; }
-.sobre-caixa h3 { font-size: 1.6rem; }
-.sobre-caixa h4 { font-size: 1.4rem; }
-.sobre-caixa h5 { font-size: 1.25rem; }
+.sobre-caixa h1 {
+  font-size: 2.4rem;
+}
+.sobre-caixa h2 {
+  font-size: 1.9rem;
+}
+.sobre-caixa h3 {
+  font-size: 1.6rem;
+}
+.sobre-caixa h4 {
+  font-size: 1.4rem;
+}
+.sobre-caixa h5 {
+  font-size: 1.25rem;
+}
 
 /* Linha fina decorativa embaixo dos títulos */
 .sobre-caixa h2::after {
@@ -126,7 +136,7 @@ body {
   .sobre-caixa {
     padding: 1.6rem;
   }
-  
+
   .sobre-titulo {
     font-size: 2rem;
   }
@@ -141,36 +151,36 @@ body {
 }
 /* Rodapé */
 .rodape {
-    width: 100%;
-    text-align: center;
-    padding: 20px 10px;
-    background-color: #111;
-    color: white;
-    margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #111;
+  color: white;
+  margin-top: 40px;
 }
 
 /* Lista dos ícones */
 .imagensrodape {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px; /* distância entre os ícones */
-    margin-top: 15px;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* distância entre os ícones */
+  margin-top: 15px;
+  padding: 0;
 }
 
 /* Configuração base dos ícones */
 .imagensrodape img {
-    width: 35px;       /* tamanho base */
-    height: 35px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  width: 35px; /* tamanho base */
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 /* HOVER */
 .imagensrodape img:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 /* ======================
@@ -233,7 +243,6 @@ body {
   padding-top: 70px;
 }
 
-
 /* ============================
       FOTO DO CABEÇALHO
 ============================ */
@@ -261,4 +270,64 @@ body {
 .cabecalho-sub-titulo {
   font-size: 1.3rem;
   color: var(--claro);
+}
+/* -------- MENU HAMBURGUER -------- */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 9999;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Animação do X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* -------- Menu no mobile -------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .menu li {
+    margin-bottom: 15px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
 }

@@ -14,12 +14,19 @@
     <nav class="navegacao">
       <ul class="menu">
         <li><a href="#inicio" class="menu-link">Início</a></li>
-        <li id = "#indexcontatos"><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
         <li><a href="#projetos" class="menu-link">Projetos</a></li>
         <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
         <li><a href="#contatos" class="menu-link">Contatos</a></li>
       </ul>
     </nav>
+
+    <!-- Botão Hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
     <!-- Cabeçalho principal -->
     <main id="inicio" class="cabecalho">
@@ -35,10 +42,7 @@
         <p class="sobre-paragrafo">
           Sou um desenvolvedor apaixonado por tecnologia, fascinado pelo poder
           da programação e pelo impacto que ela pode gerar. Cada linha de código
-          que escrevo é um passo para transformar ideias em realidade. Ver meus
-          projetos funcionando, ganhando vida na tela, é a maior recompensa — é
-          a prova de que dedicação e criatividade podem criar experiências
-          incríveis.
+          que escrevo é um passo para transformar ideias em realidade.
         </p>
       </div>
     </section>
@@ -46,27 +50,33 @@
     <!-- Projetos -->
     <section id="projetos" class="projetos">
       <h2 class="projetos-titulo">Meus Projetos</h2>
-      <h3 class="aviso">Clique na imagem e veja os repositorios</h3>
+      <h3 class="aviso">Clique na imagem e veja os repositórios</h3>
       <div class="projetos-caixa">
         <!-- Projeto 1 -->
-        <a href="https://github.com/FreiresBruno/projeto-web.git" class="projeto-link1">   
-        <div class="projetos-card">
-          <img
-            src="./imagens/img1.png"
-            alt="imagem-projeto1"
-            class="projetos-imagem"
-          />
-          <div class="caixa-textos-projeto">
-            <h3 class="info-projetos">Pizzaria Cowabunga</h3>
-            <p class="paragrafo-projetos">
-              Este foi um projeto desenvolvido em grupo, com o objetivo de se
-              desenvolver para um projeto do Senac.
-            </p>
+        <a
+          href="https://github.com/FreiresBruno/projeto-web.git"
+          class="projeto-link1"
+        >
+          <div class="projetos-card">
+            <img
+              src="./imagens/img1.png"
+              alt="imagem-projeto1"
+              class="projetos-imagem"
+            />
+            <div class="caixa-textos-projeto">
+              <h3 class="info-projetos">Pizzaria Cowabunga</h3>
+              <p class="paragrafo-projetos">
+                Projeto desenvolvido em grupo para o Senac.
+              </p>
+            </div>
           </div>
-        </div>
         </a>
+
         <!-- Projeto 2 -->
-        <a href="https://github.com/FreiresBruno/tincphp.git" class="projeto-link2">
+        <a
+          href="https://github.com/FreiresBruno/tincphp.git"
+          class="projeto-link2"
+        >
           <div class="projetos-card">
             <img
               src="./imagens/img2.png"
@@ -76,32 +86,32 @@
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Chuleta Quenta</h3>
               <p class="paragrafo-projetos">
-                Este foi um projeto para se desenvolver utilizando pela primeira
-                vez o PHP com Banco de dados.
+                Primeiro projeto usando PHP + Banco de dados.
               </p>
             </div>
           </div>
         </a>
 
         <!-- Projeto 3 -->
-       <a href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git" class="projeto-link3">  
-        <div class="projetos-card">
-          <img
-            src="./imagens/img3.jpg"
-            alt="imagem-projeto3"
-            class="projetos-imagem"
-          />
-          <div class="caixa-textos-projeto">
-            <h3 class="info-projetos">Site Off-White</h3>
-            <p class="paragrafo-projetos">
-              Assim que começei a programar com Css e Html, esse foi um site que
-              crie como copia para me ajudar a entender as linguagens
-              primordiais de qualquer site.
-            </p>
+        <a
+          href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git"
+          class="projeto-link3"
+        >
+          <div class="projetos-card">
+            <img
+              src="./imagens/img3.jpg"
+              alt="imagem-projeto3"
+              class="projetos-imagem"
+            />
+            <div class="caixa-textos-projeto">
+              <h3 class="info-projetos">Site Off-White</h3>
+              <p class="paragrafo-projetos">
+                Um dos primeiros sites que desenvolvi para estudo de HTML e CSS.
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
-     </a> 
     </section>
 
     <!-- Contato -->
@@ -124,7 +134,6 @@
             id="mensagem"
           ></textarea>
         </div>
-
         <button type="submit" class="botao-form">Enviar WhatsApp</button>
       </form>
     </section>
@@ -144,46 +153,48 @@
         window.open(url, "_blank");
       }
     </script>
+
+    <!-- SCRIPT DO MENU HAMBÚRGUER -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.querySelector(".menu");
+
+      hamburger.onclick = () => {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("active");
+      };
+
+      document.querySelectorAll(".menu-link").forEach((link) => {
+        link.onclick = () => {
+          hamburger.classList.remove("active");
+          menu.classList.remove("active");
+        };
+      });
+    </script>
+
     <footer class="rodape">
-      <p>
-        © 2025 Bruno Freires. Todos os direitos reservados. Entre em contato
-        para obter seu próprio site.
-      </p>
+      <p>© 2025 Bruno Freires. Todos os direitos reservados.</p>
 
       <ul class="imagensrodape">
         <li class="github">
-          <a
-            href="https://github.com/FreiresBruno"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./imagens/Github.png" alt="GitHub de Bruno Freires" />
-          </a>
+          <a href="https://github.com/FreiresBruno" target="_blank"
+            ><img src="./imagens/Github.png" alt="GitHub"
+          /></a>
         </li>
-
         <li class="linkedin">
           <a
             href="https://www.linkedin.com/in/bruno-eduardo-f-6b53a8250"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./imagens/linkedn.png" alt="LinkedIn de Bruno Freires" />
-          </a>
+            ><img src="./imagens/linkedn.png" alt="LinkedIn"
+          /></a>
         </li>
-
         <li class="instagram">
-          <a
-            href="https://www.instagram.com/bfreires_"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="./imagens/instagram-logo.png"
-              alt="Instagram de Bruno Freires"
-            />
-          </a>
+          <a href="https://www.instagram.com/bfreires_" target="_blank"
+            ><img src="./imagens/instagram-logo.png" alt="Instagram"
+          /></a>
         </li>
       </ul>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
