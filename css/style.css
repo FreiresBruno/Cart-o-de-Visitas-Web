@@ -524,3 +524,14 @@ body.light .foto-perfil {
 body.light .particulas {
   background: var(--maisEscuro);
 }
+/* Modo Light */
+body.light .paragrafo-projetos,
+body.light .info-projetos {
+  color: #000;  /* preto */
+}
+
+/* Modo Dark */
+body.dark .paragrafo-projetos,
+body.dark .info-projetos {
+  color: #fff;  /* branco */
+}
