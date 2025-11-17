@@ -7,35 +7,43 @@
     <link rel="shortcut icon" href="./imagens/FREIRES.png" type="faviconname" />
     <title>Meu Portfólio</title>
   </head>
+
   <body>
     <div class="particulas"></div>
 
-    <!-- Navegação superior -->
-    <nav class="navegacao">
-      <ul class="menu">
-        <li><a href="#inicio" class="menu-link">Início</a></li>
-        <li><a href="#sobre" class="menu-link">Sobre</a></li>
-        <li><a href="#projetos" class="menu-link">Projetos</a></li>
-        <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
-        <li><a href="#contatos" class="menu-link">Contatos</a></li>
-      </ul>
-    </nav>
+    <!-- =============== NAVBAR =============== -->
+<nav class="navegacao">
+  <ul class="menu">
+    <li><a href="#inicio" class="menu-link">Início</a></li>
+    <li><a href="#sobre" class="menu-link">Sobre</a></li>
+    <li><a href="#projetos" class="menu-link">Projetos</a></li>
+    <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
+    <li><a href="#contatos" class="menu-link">Contatos</a></li>
 
-    <!-- Botão Hambúrguer -->
+    <!-- 🔥 BOTÃO DARK/LIGHT FUNCIONAL -->
+    <li class="modo-item">
+      <div class="trilho" id="trilho">
+        <div class="indicador"></div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+    <!-- Botão Hambúrguer (mobile) -->
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Cabeçalho principal -->
+    <!-- =============== CABEÇALHO =============== -->
     <main id="inicio" class="cabecalho">
       <img src="./imagens/imgbruno.jpeg" alt="imgbruno" class="foto-perfil" />
       <h1>Bruno Freires</h1>
       <p class="cabecalho-sub-titulo">Desenvolvedor Front-End</p>
     </main>
 
-    <!-- Sobre mim -->
+    <!-- =============== SOBRE =============== -->
     <section id="sobre" class="sobre">
       <h2 class="sobre-titulo">Sobre Mim</h2>
       <div class="sobre-caixa">
@@ -47,114 +55,104 @@
       </div>
     </section>
 
-    <!-- Projetos -->
+    <!-- =============== PROJETOS =============== -->
     <section id="projetos" class="projetos">
       <h2 class="projetos-titulo">Meus Projetos</h2>
       <h3 class="aviso">Clique na imagem e veja os repositórios</h3>
+
       <div class="projetos-caixa">
         <!-- Projeto 1 -->
-        <a
-          href="https://github.com/FreiresBruno/projeto-web.git"
-          class="projeto-link1"
-        >
+        <a href="https://github.com/FreiresBruno/projeto-web.git" class="projeto-link1">
           <div class="projetos-card">
-            <img
-              src="./imagens/img1.png"
-              alt="imagem-projeto1"
-              class="projetos-imagem"
-            />
+            <img src="./imagens/img1.png" alt="imagem-projeto1" class="projetos-imagem" />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Pizzaria Cowabunga</h3>
-              <p class="paragrafo-projetos">
-                Projeto desenvolvido em grupo para o Senac.
-              </p>
+              <p class="paragrafo-projetos">Projeto desenvolvido em grupo para o Senac.</p>
             </div>
           </div>
         </a>
 
         <!-- Projeto 2 -->
-        <a
-          href="https://github.com/FreiresBruno/tincphp.git"
-          class="projeto-link2"
-        >
+        <a href="https://github.com/FreiresBruno/tincphp.git" class="projeto-link2">
           <div class="projetos-card">
-            <img
-              src="./imagens/img2.png"
-              alt="imagem-projeto2"
-              class="projetos-imagem"
-            />
+            <img src="./imagens/img2.png" alt="imagem-projeto2" class="projetos-imagem" />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Chuleta Quenta</h3>
-              <p class="paragrafo-projetos">
-                Primeiro projeto usando PHP + Banco de dados.
-              </p>
+              <p class="paragrafo-projetos">Primeiro projeto usando PHP + Banco de dados.</p>
             </div>
           </div>
         </a>
 
         <!-- Projeto 3 -->
-        <a
-          href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git"
-          class="projeto-link3"
-        >
+        <a href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git" class="projeto-link3">
           <div class="projetos-card">
-            <img
-              src="./imagens/img3.jpg"
-              alt="imagem-projeto3"
-              class="projetos-imagem"
-            />
+            <img src="./imagens/img3.jpg" alt="imagem-projeto3" class="projetos-imagem" />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Site Off-White</h3>
-              <p class="paragrafo-projetos">
-                Um dos primeiros sites que desenvolvi para estudo de HTML e CSS.
-              </p>
+              <p class="paragrafo-projetos">Um dos primeiros sites que desenvolvi para estudo de HTML e CSS.</p>
             </div>
           </div>
         </a>
       </div>
     </section>
 
-    <!-- Contato -->
+    <!-- =============== CONTATO =============== -->
     <section id="contatos" class="contatos">
       <h2 class="contatos-titulo">Entre em Contato</h2>
 
-      <form
-        class="formulario-contato"
-        id="formulario"
-        onsubmit="enviarWhats(event)"
-      >
+      <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
         <div class="grupo-form">
           <input placeholder="Nome" class="campo-form" id="nome" />
         </div>
+
         <div class="grupo-form">
-          <textarea
-            class="campo-form"
-            placeholder="Digite sua mensagem"
-            rows="6"
-            id="mensagem"
-          ></textarea>
+          <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
         </div>
+
         <button type="submit" class="botao-form">Enviar WhatsApp</button>
       </form>
     </section>
 
+    <!-- =============== RODAPÉ =============== -->
+    <footer class="rodape">
+      <p>© 2025 Bruno Freires. Todos os direitos reservados.</p>
+
+      <ul class="imagensrodape">
+        <li class="github">
+          <a href="https://github.com/FreiresBruno" target="_blank">
+            <img src="./imagens/Github.png" alt="GitHub" />
+          </a>
+        </li>
+
+        <li class="linkedin">
+          <a href="https://www.linkedin.com/in/bruno-eduardo-f-6b53a8250" target="_blank">
+            <img src="./imagens/linkedn.png" alt="LinkedIn" />
+          </a>
+        </li>
+
+        <li class="instagram">
+          <a href="https://www.instagram.com/bfreires_" target="_blank">
+            <img src="./imagens/instagram-logo.png" alt="Instagram" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
     <script>
       function enviarWhats(event) {
         event.preventDefault();
-
         const nome = document.getElementById("nome").value;
         const mensagem = document.getElementById("mensagem").value;
         const telefone = "5511965016102";
 
         const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
         const msgFormatada = encodeURIComponent(texto);
-        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
-        window.open(url, "_blank");
+        window.open(`https://wa.me/${telefone}?text=${msgFormatada}`, "_blank");
       }
     </script>
 
-    <!-- SCRIPT DO MENU HAMBÚRGUER -->
     <script>
       const hamburger = document.getElementById("hamburger");
       const menu = document.querySelector(".menu");
@@ -172,29 +170,19 @@
       });
     </script>
 
-    <footer class="rodape">
-      <p>© 2025 Bruno Freires. Todos os direitos reservados.</p>
+    <!-- DARK/LIGHT MODE -->
+    <script>
+  const trilho = document.getElementById('trilho');
+  const body = document.body;
 
-      <ul class="imagensrodape">
-        <li class="github">
-          <a href="https://github.com/FreiresBruno" target="_blank"
-            ><img src="./imagens/Github.png" alt="GitHub"
-          /></a>
-        </li>
-        <li class="linkedin">
-          <a
-            href="https://www.linkedin.com/in/bruno-eduardo-f-6b53a8250"
-            target="_blank"
-            ><img src="./imagens/linkedn.png" alt="LinkedIn"
-          /></a>
-        </li>
-        <li class="instagram">
-          <a href="https://www.instagram.com/bfreires_" target="_blank"
-            ><img src="./imagens/instagram-logo.png" alt="Instagram"
-          /></a>
-        </li>
-      </ul>
-    </footer>
-    <script src="index.js"></script>
+  trilho.addEventListener('click', () => {
+    trilho.classList.toggle('dark');
+    body.classList.toggle('light');
+  });
+</script>
+<script src="main.js"></script>
+
+
+
   </body>
 </html>
