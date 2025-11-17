@@ -523,3 +523,11 @@ h1 {
     margin-top: 15px;
   }
 }
+/* Sombras e partículas desaparecem no modo claro */
+body.light .foto-perfil {
+  box-shadow: none;
+}
+
+body.light .particulas {
+  background: var(--maisEscuro); /* fundo liso sem partículas */
+}

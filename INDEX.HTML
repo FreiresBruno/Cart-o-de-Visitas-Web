@@ -12,22 +12,22 @@
     <div class="particulas"></div>
 
     <!-- =============== NAVBAR =============== -->
-<nav class="navegacao">
-  <ul class="menu">
-    <li><a href="#inicio" class="menu-link">Início</a></li>
-    <li><a href="#sobre" class="menu-link">Sobre</a></li>
-    <li><a href="#projetos" class="menu-link">Projetos</a></li>
-    <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
-    <li><a href="#contatos" class="menu-link">Contatos</a></li>
+    <nav class="navegacao">
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
+        <li><a href="#contatos" class="menu-link">Contatos</a></li>
 
-    <!-- 🔥 BOTÃO DARK/LIGHT FUNCIONAL -->
-    <li class="modo-item">
-      <div class="trilho" id="trilho">
-        <div class="indicador"></div>
-      </div>
-    </li>
-  </ul>
-</nav>
+        <!-- 🔥 BOTÃO DARK/LIGHT FUNCIONAL -->
+        <li class="modo-item">
+          <div class="trilho" id="trilho">
+            <div class="indicador"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
 
     <!-- Botão Hambúrguer (mobile) -->
     <div class="hamburger" id="hamburger">
@@ -172,17 +172,36 @@
 
     <!-- DARK/LIGHT MODE -->
     <script>
-  const trilho = document.getElementById('trilho');
-  const body = document.body;
+      const trilho = document.getElementById('trilho');
+      const body = document.body;
 
-  trilho.addEventListener('click', () => {
-    trilho.classList.toggle('dark');
-    body.classList.toggle('light');
-  });
-</script>
-<script src="main.js"></script>
+      // Define o tema inicial (dark por padrão ou pelo localStorage)
+      const temaSalvo = localStorage.getItem('tema');
+      if (temaSalvo) {
+        body.className = temaSalvo;
+        trilho.classList.toggle('dark', temaSalvo === 'light');
+      } else {
+        body.classList.add('dark'); // padrão dark
+        trilho.classList.remove('dark');
+      }
 
+      // Alterna tema ao clicar
+      trilho.addEventListener('click', () => {
+        if (body.classList.contains('dark')) {
+          body.classList.remove('dark');
+          body.classList.add('light');
+          trilho.classList.add('dark');
+          localStorage.setItem('tema', 'light');
+        } else {
+          body.classList.remove('light');
+          body.classList.add('dark');
+          trilho.classList.remove('dark');
+          localStorage.setItem('tema', 'dark');
+        }
+      });
+    </script>
 
+    <script src="main.js"></script>
 
   </body>
 </html>
