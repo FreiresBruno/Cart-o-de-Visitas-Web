@@ -301,6 +301,71 @@ body.light .rodape {
     display: flex;
   }
 }
+/* =========================
+   RESPONSIVO CORRIGIDO
+========================= */
+@media screen and (max-width: 768px) {
+  .navegacao {
+    justify-content: space-between;
+  }
+
+  /* Hamburger visível */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--claro);
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  /* Menu escondido por padrão */
+  .menu {
+    display: none; /* esconde menu no celular */
+    flex-direction: column; /* lista vertical */
+    background-color: var(--maisEscuro);
+    position: absolute;
+    top: 60px; /* abaixo da nav */
+    right: 0; /* alinha à direita */
+    width: 100%; /* ocupa largura total da tela */
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    gap: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 99;
+  }
+
+  /* Menu visível quando ativo */
+  .menu.show {
+    display: flex;
+  }
+
+  /* Links maiores e centralizados no menu mobile */
+  .menu li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Pequenas telas extra (celulares bem pequenos) */
+@media screen and (max-width: 480px) {
+  .menu {
+    top: 55px;
+    padding: 0.75rem;
+  }
+
+  .menu li a {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* =========================
    ESTILO SWITCH DARK/LIGHT
