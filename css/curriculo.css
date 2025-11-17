@@ -45,34 +45,89 @@ h1, h2, h3 {
 /* =========================
    RODAPÉ
 ========================= */
+/* =========================
+   RODAPÉ UNIFICADO
+========================= */
 .rodape {
-  background-color: var(--primaria);
-  color: #fff;
+  background-color: rgba(15, 23, 42, 0.8); /* fundo com leve transparência */
+  color: var(--claro);
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
   border-top: 1px solid var(--vidro);
+  backdrop-filter: blur(10px);
   transition: background 0.3s, color 0.3s;
 }
 
+.rodape p {
+  margin-bottom: 1rem;
+}
+
+/* Lista de ícones */
 .rodape ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem; /* Espaçamento uniforme */
+  gap: 2rem;
   list-style: none;
   padding: 0;
-  margin-top: 1rem;
+  margin: 1rem auto 0 auto;
 }
 
-/* Padronizando todos os ícones do rodapé */
+/* Ícones do rodapé */
 .rodape ul li img {
-  width: 70px;                 /* Mesma largura */
-  height: 70px;                /* Mesma altura */
-  border-radius: 50%;          /* Cantos arredondados */
-  object-fit: contain;         /* Mantém a proporção da imagem */
-  transition: transform 0.3s, box-shadow 0.3s; /* Efeito hover */
+  width: 3.5rem;       /* tamanho padrão */
+  height: 3.5rem;
+  border-radius: 50%;  /* cantos arredondados */
+  object-fit: contain;
+  transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
 }
+
+/* Hover nos ícones */
+.rodape ul li img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* GitHub maior */
+.rodape ul li.github img {
+  width: 6.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .rodape ul {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .rodape ul li img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .rodape ul li.github img {
+    width: 4.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .rodape ul li img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .rodape ul li.github img {
+    width: 3.8rem;
+  }
+}
+
 
 /* Efeito hover para todos os ícones */
 .rodape ul li img:hover {
