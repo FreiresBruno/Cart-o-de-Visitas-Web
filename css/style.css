@@ -535,3 +535,162 @@ body.dark .paragrafo-projetos,
 body.dark .info-projetos {
   color: #fff;  /* branco */
 }
+*:focus {
+  outline: 2px dashed #0077ff;
+  outline-offset: 4px;
+}
+/* ============================
+   ACESSIBILIDADE (NÃO ESTÉTICO)
+   ============================ */
+
+/* Link "Pular para o conteúdo" */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+/* Foco visível em TODOS os elementos acessíveis */
+:focus-visible {
+  outline: 3px solid #00aaff;
+  outline-offset: 4px;
+}
+
+/* Foco ainda mais forte no modo light */
+body.light :focus-visible {
+  outline: 3px solid #111;
+}
+
+/* Garantir que links dentro de cards recebam foco */
+.projeto-link1:focus-visible,
+.projeto-link2:focus-visible,
+.projeto-link3:focus-visible {
+  outline: 3px solid var(--primaria);
+  border-radius: 16px;
+}
+
+/* Acessibilidade no menu */
+.menu-link:focus-visible {
+  outline: 2px solid var(--primaria);
+  outline-offset: 4px;
+}
+
+/* Acessibilidade do botão hamburguer */
+.hamburger:focus-visible {
+  outline: 3px solid var(--primaria);
+  border-radius: 6px;
+}
+
+/* Inputs acessíveis */
+.campo-form:focus-visible {
+  outline: 3px solid var(--primaria);
+}
+
+/* Botão do formulário acessível */
+.botao-form:focus-visible {
+  outline: 3px solid var(--secundaria);
+  outline-offset: 4px;
+}
+
+/* Imagens que são links (rodapé) */
+.imagensrodape img:focus-visible {
+  outline: 3px solid var(--primaria);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Acessibilidade geral para elementos interativos */
+a, button, input, select, textarea {
+  min-height: 1rem;
+}
+
+/* Garantir que DIVs não focáveis fiquem fora da navegação */
+div:not([tabindex="0"]) {
+  outline: none;
+}
+
+/* Cards clicáveis com foco interno suave */
+.projetos-card:focus-within {
+  box-shadow: 0 0 0 3px var(--primaria);
+}
+/* ================================
+   ACESSIBILIDADE — Foco no rodapé
+   ================================ */
+
+/* Foco visível no link que envolve as imagens do rodapé */
+.imagensrodape a:focus-visible {
+  outline: 3px solid var(--primaria);   /* cor do seu tema */
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+/* Modo claro — deixa o foco preto para alto contraste */
+body.light .imagensrodape a:focus-visible {
+  outline: 3px solid #111;
+}
+/* Torna os links do rodapé elementos de caixa reais */
+.imagensrodape a {
+  display: inline-block;   /* permite outline aparecer corretamente */
+  padding: 4px;            /* mínimo necessário para o foco ficar visível */
+  border-radius: 8px;
+}
+
+/* Foco visível (tema dark) */
+.imagensrodape a:focus-visible {
+  outline: 3px solid var(--primaria);
+  outline-offset: 4px;
+}
+
+/* Foco visível (tema light) */
+body.light .imagensrodape a:focus-visible {
+  outline: 3px solid #111;
+}
+h1:focus,
+p:focus {
+  outline: 3px solid #ff9800; /* Destaque visível */
+  outline-offset: 2px;
+}
+/* Foco uniforme para elementos com tabindex (inclusive h1 e p) */
+[cursor="0"], [tabindex="0"]:focus-visible {
+  outline: 3px solid var(--primaria); /* tema dark */
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+body.light [tabindex="0"]:focus-visible {
+  outline: 3px solid #111; /* tema light */
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+/* Foco visível no botão hamburguer */
+.hamburger:focus-visible {
+  outline: 3px solid var(--primaria);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* Foco visível nos links do menu mobile */
+.navegacao .menu .menu-link:focus-visible {
+  outline: 3px solid var(--primaria);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* Ajustes para modo light */
+body.light .hamburger:focus-visible {
+  outline: 3px solid #111;
+}
+
+body.light .navegacao .menu .menu-link:focus-visible {
+  outline: 3px solid #111;
+}

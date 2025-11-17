@@ -9,20 +9,29 @@
   </head>
 
   <body>
+    <!-- 🔥 LINK DE ACESSIBILIDADE PARA PULAR AO CONTEÚDO -->
+    <a href="#inicio" class="skip-link"></a>
+
     <div class="particulas"></div>
 
     <!-- =============== NAVBAR =============== -->
-    <nav class="navegacao">
-      <ul class="menu">
+    <nav class="navegacao" aria-label="Menu principal">
+      <ul class="menu" id="menu">
         <li><a href="#inicio" class="menu-link">Início</a></li>
         <li><a href="#sobre" class="menu-link">Sobre</a></li>
         <li><a href="#projetos" class="menu-link">Projetos</a></li>
         <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
         <li><a href="#contatos" class="menu-link">Contatos</a></li>
 
-        <!-- 🔥 BOTÃO DARK/LIGHT FUNCIONAL -->
+        <!-- 🔥 BOTÃO DARK/LIGHT ACESSÍVEL -->
         <li class="modo-item">
-          <div class="trilho" id="trilho">
+          <div
+            class="trilho"
+            id="trilho"
+            tabindex="0"
+            role="button"
+            aria-label="Alternar tema claro e escuro"
+          >
             <div class="indicador"></div>
           </div>
         </li>
@@ -30,7 +39,13 @@
     </nav>
 
     <!-- Botão Hambúrguer (mobile) -->
-    <div class="hamburger" id="hamburger">
+    <div
+      class="hamburger"
+      id="hamburger"
+      tabindex="0"
+      role="button"
+      aria-label="Abrir ou fechar o menu"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -38,9 +53,14 @@
 
     <!-- =============== CABEÇALHO =============== -->
     <main id="inicio" class="cabecalho">
-      <img src="./imagens/imgbruno.jpeg" alt="imgbruno" class="foto-perfil" />
-      <h1>Bruno Freires</h1>
-      <p class="cabecalho-sub-titulo">Desenvolvedor Front-End</p>
+      <img
+        src="./imagens/imgbruno.jpeg"
+        alt="Foto de Bruno Freires"
+        class="foto-perfil"
+        tabindex="0"
+      />
+      <h1 tabindex="0">Bruno Freires</h1>
+      <p class="cabecalho-sub-titulo" tabindex="0">Desenvolvedor Front-End</p>
     </main>
 
     <!-- =============== SOBRE =============== -->
@@ -62,34 +82,61 @@
 
       <div class="projetos-caixa">
         <!-- Projeto 1 -->
-        <a href="https://github.com/FreiresBruno/projeto-web.git" class="projeto-link1">
+        <a
+          href="https://github.com/FreiresBruno/projeto-web.git"
+          class="projeto-link1"
+        >
           <div class="projetos-card">
-            <img src="./imagens/img1.png" alt="imagem-projeto1" class="projetos-imagem" />
+            <img
+              src="./imagens/img1.png"
+              alt="Pizzaria Cowabunga - Projeto em grupo"
+              class="projetos-imagem"
+            />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Pizzaria Cowabunga</h3>
-              <p class="paragrafo-projetos">Projeto desenvolvido em grupo para o Senac.</p>
+              <p class="paragrafo-projetos">
+                Projeto desenvolvido em grupo para o Senac.
+              </p>
             </div>
           </div>
         </a>
 
         <!-- Projeto 2 -->
-        <a href="https://github.com/FreiresBruno/tincphp.git" class="projeto-link2">
+        <a
+          href="https://github.com/FreiresBruno/tincphp.git"
+          class="projeto-link2"
+        >
           <div class="projetos-card">
-            <img src="./imagens/img2.png" alt="imagem-projeto2" class="projetos-imagem" />
+            <img
+              src="./imagens/img2.png"
+              alt="Chuleta Quenta - Projeto em PHP"
+              class="projetos-imagem"
+            />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Chuleta Quenta</h3>
-              <p class="paragrafo-projetos">Primeiro projeto usando PHP + Banco de dados.</p>
+              <p class="paragrafo-projetos">
+                Primeiro projeto usando PHP + Banco de dados.
+              </p>
             </div>
           </div>
         </a>
 
         <!-- Projeto 3 -->
-        <a href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git" class="projeto-link3">
+        <a
+          href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git"
+          class="projeto-link3"
+        >
           <div class="projetos-card">
-            <img src="./imagens/img3.jpg" alt="imagem-projeto3" class="projetos-imagem" />
+            <img
+              src="./imagens/img3.jpg"
+              alt="Site Off-White - Projeto de HTML e CSS"
+              class="projetos-imagem"
+            />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Site Off-White</h3>
-              <p class="paragrafo-projetos">Um dos primeiros sites que desenvolvi para estudo de HTML e CSS.</p>
+              <p class="paragrafo-projetos">
+                Um dos primeiros sites que desenvolvi para estudo de HTML e CSS.
+              </p>
             </div>
           </div>
         </a>
@@ -100,13 +147,29 @@
     <section id="contatos" class="contatos">
       <h2 class="contatos-titulo">Entre em Contato</h2>
 
-      <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+      <form
+        class="formulario-contato"
+        id="formulario"
+        onsubmit="enviarWhats(event)"
+        aria-label="Formulário de contato"
+      >
         <div class="grupo-form">
-          <input placeholder="Nome" class="campo-form" id="nome" />
+          <input
+            placeholder="Nome"
+            class="campo-form"
+            id="nome"
+            aria-label="Seu nome"
+          />
         </div>
 
         <div class="grupo-form">
-          <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+          <textarea
+            class="campo-form"
+            placeholder="Digite sua mensagem"
+            rows="6"
+            id="mensagem"
+            aria-label="Sua mensagem"
+          ></textarea>
         </div>
 
         <button type="submit" class="botao-form">Enviar WhatsApp</button>
@@ -119,20 +182,35 @@
 
       <ul class="imagensrodape">
         <li class="github">
-          <a href="https://github.com/FreiresBruno" target="_blank">
-            <img src="./imagens/Github.png" alt="GitHub" />
+          <a
+            href="https://github.com/FreiresBruno"
+            target="_blank"
+            aria-label="GitHub de Bruno Freires"
+          >
+            <img src="./imagens/Github.png" alt="Logotipo do GitHub" />
           </a>
         </li>
 
         <li class="linkedin">
-          <a href="https://www.linkedin.com/in/bruno-eduardo-f-6b53a8250" target="_blank">
-            <img src="./imagens/linkedn.png" alt="LinkedIn" />
+          <a
+            href="https://www.linkedin.com/in/bruno-eduardo-f-6b53a8250"
+            target="_blank"
+            aria-label="LinkedIn de Bruno Freires"
+          >
+            <img src="./imagens/linkedn.png" alt="Logotipo do LinkedIn" />
           </a>
         </li>
 
         <li class="instagram">
-          <a href="https://www.instagram.com/bfreires_" target="_blank">
-            <img src="./imagens/instagram-logo.png" alt="Instagram" />
+          <a
+            href="https://www.instagram.com/bfreires_"
+            target="_blank"
+            aria-label="Instagram de Bruno Freires"
+          >
+            <img
+              src="./imagens/instagram-logo.png"
+              alt="Logotipo do Instagram"
+            />
           </a>
         </li>
       </ul>
@@ -154,19 +232,39 @@
     </script>
 
     <script>
+      // HAMBÚRGUER FUNCIONAL
       const hamburger = document.getElementById("hamburger");
-      const menu = document.querySelector(".menu");
+      const menu = document.getElementById("menu");
+      const menuLinks = document.querySelectorAll(".menu-link");
 
-      hamburger.onclick = () => {
+      // Inicialmente desativa TAB nos links mobile
+      menuLinks.forEach(link => link.setAttribute("tabindex", "-1"));
+
+      // Abre/fecha menu e ajusta tabindex
+      hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         menu.classList.toggle("active");
-      };
 
-      document.querySelectorAll(".menu-link").forEach((link) => {
-        link.onclick = () => {
+        menuLinks.forEach(link => {
+          link.setAttribute("tabindex", menu.classList.contains("active") ? "0" : "-1");
+        });
+      });
+
+      // Fecha menu ao clicar em algum link
+      menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
           hamburger.classList.remove("active");
           menu.classList.remove("active");
-        };
+          menuLinks.forEach(link => link.setAttribute("tabindex", "-1"));
+        });
+      });
+
+      // Acessibilidade: ENTER e ESPAÇO ativam menu
+      hamburger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          hamburger.click();
+        }
       });
     </script>
 
@@ -175,33 +273,56 @@
       const trilho = document.getElementById('trilho');
       const body = document.body;
 
-      // Define o tema inicial (dark por padrão ou pelo localStorage)
       const temaSalvo = localStorage.getItem('tema');
       if (temaSalvo) {
         body.className = temaSalvo;
         trilho.classList.toggle('dark', temaSalvo === 'light');
       } else {
-        body.classList.add('dark'); // padrão dark
+        body.classList.add('dark');
         trilho.classList.remove('dark');
       }
 
-      // Alterna tema ao clicar
       trilho.addEventListener('click', () => {
         if (body.classList.contains('dark')) {
-          body.classList.remove('dark');
-          body.classList.add('light');
+          body.classList.replace('dark', 'light');
           trilho.classList.add('dark');
           localStorage.setItem('tema', 'light');
         } else {
-          body.classList.remove('light');
-          body.classList.add('dark');
+          body.classList.replace('light', 'dark');
           trilho.classList.remove('dark');
           localStorage.setItem('tema', 'dark');
         }
       });
+
+      // Acessibilidade: ENTER e ESPAÇO alteram tema
+      trilho.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          trilho.click();
+        }
+      });
     </script>
 
-    <script src="main.js"></script>
+    <style>
+      /* Foco visível no hambúrguer */
+      .hamburger:focus-visible {
+        outline: 3px solid var(--primaria);
+        outline-offset: 4px;
+        border-radius: 6px;
+      }
 
+      /* Foco visível nos links do menu mobile */
+      .menu .menu-link:focus-visible {
+        outline: 3px solid var(--primaria);
+        outline-offset: 4px;
+        border-radius: 6px;
+      }
+
+      /* Ajustes para modo light */
+      body.light .hamburger:focus-visible,
+      body.light .menu .menu-link:focus-visible {
+        outline: 3px solid #111;
+      }
+    </style>
   </body>
 </html>

@@ -398,3 +398,7 @@ body.light .rodape {
 .trilho.dark .bola {
   left: 26px; /* bola desliza para a direita */
 }
+*:focus {
+  outline: 2px dashed #0077ff;
+  outline-offset: 4px;
+}
