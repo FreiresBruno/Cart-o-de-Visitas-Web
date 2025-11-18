@@ -402,3 +402,76 @@ body.light .rodape {
   outline: 2px dashed #0077ff;
   outline-offset: 4px;
 }
+/* =========================
+   MENU RESPONSIVO FINAL
+========================= */
+@media screen and (max-width: 768px) {
+
+  .navegacao {
+    justify-content: space-between;
+  }
+
+  /* Hamburger visível */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--claro);
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  /* Menu mobile */
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;         /* centraliza */
+    justify-content: center;     /* centraliza */
+    background-color: var(--maisEscuro);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 0 0 10px 10px;
+    gap: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 99;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  /* Itens um abaixo do outro e centralizados */
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra-small devices */
+@media screen and (max-width: 480px) {
+
+  .menu {
+    top: 55px;
+    padding: 1rem 0.5rem;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+  }
+}

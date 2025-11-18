@@ -694,3 +694,11 @@ body.light .hamburger:focus-visible {
 body.light .navegacao .menu .menu-link:focus-visible {
   outline: 3px solid #111;
 }
+/* =========================
+   NAVBAR CORRIGIDA NO MODO CLARO
+========================= */
+body.light .navegacao {
+  background-color: rgba(243, 244, 246, 0.8); /* igual ao --maisEscuro do modo light */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}

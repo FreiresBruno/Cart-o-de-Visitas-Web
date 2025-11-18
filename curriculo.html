@@ -18,14 +18,14 @@
       <span></span>
     </div>
 
-    <ul class="navbar-list" id="menu">
+    <!-- CORREÇÃO FEITA AQUI: class="menu" -->
+    <ul class="menu" id="menu">
       <li><a href="index.html#inicio">Início</a></li>
       <li><a href="index.html#sobre">Sobre</a></li>
       <li><a href="index.html#projetos">Projetos</a></li>
       <li><a href="curriculo.html">Currículo</a></li>
       <li class="nav-contatos-toggle">
         <a href="index.html#contatos">Entre em Contato</a>
-        <!-- Switch estilizado igual do index.html -->
         <div id="trilho" class="trilho">
           <div class="bola"></div>
         </div>
@@ -166,8 +166,8 @@
     const body = document.body;
 
     trilho.addEventListener('click', () => {
-      trilho.classList.toggle('dark'); // animação da bolinha
-      body.classList.toggle('light');  // muda o modo do site
+      trilho.classList.toggle('dark');
+      body.classList.toggle('light');
     });
 
     // Menu Hamburger
