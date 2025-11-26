@@ -694,11 +694,9 @@ body.light .hamburger:focus-visible {
 body.light .navegacao .menu .menu-link:focus-visible {
   outline: 3px solid #111;
 }
-/* =========================
-   NAVBAR CORRIGIDA NO MODO CLARO
-========================= */
+/* Navbar transparente no modo claro */
 body.light .navegacao {
-  background-color: rgba(243, 244, 246, 0.8); /* igual ao --maisEscuro do modo light */
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.25); /* transparente real */
+  backdrop-filter: --vidro(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* discreto */
 }

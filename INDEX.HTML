@@ -4,24 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="./imagens/FREIRES.png" type="faviconname" />
+    <link rel="shortcut icon" href="./imagens/FREIRES.png" type="image/png" />
     <title>Meu Portfólio</title>
   </head>
 
   <body>
     <!-- 🔥 LINK DE ACESSIBILIDADE PARA PULAR AO CONTEÚDO -->
-    <a href="#inicio" class="skip-link"></a>
 
     <div class="particulas"></div>
 
     <!-- =============== NAVBAR =============== -->
     <nav class="navegacao" aria-label="Menu principal">
       <ul class="menu" id="menu">
-        <li><a href="#inicio" class="menu-link">Início</a></li>
-        <li><a href="#sobre" class="menu-link">Sobre</a></li>
-        <li><a href="#projetos" class="menu-link">Projetos</a></li>
-        <li><a href="curriculo.html" class="menu-link">Currículo</a></li>
-        <li><a href="#contatos" class="menu-link">Contatos</a></li>
+        <li>
+          <a href="#inicio" class="menu-link" title="Ir para o início"
+            >Início</a
+          >
+        </li>
+        <li>
+          <a href="#sobre" class="menu-link" title="Ir para a seção sobre mim"
+            >Sobre</a
+          >
+        </li>
+        <li>
+          <a href="#projetos" class="menu-link" title="Ver meus projetos"
+            >Projetos</a
+          >
+        </li>
+        <li>
+          <a href="curriculo.html" class="menu-link" title="Ver meu currículo"
+            >Currículo</a
+          >
+        </li>
+        <li>
+          <a href="#contatos" class="menu-link" title="Entre em contato comigo"
+            >Contatos</a
+          >
+        </li>
 
         <!-- 🔥 BOTÃO DARK/LIGHT ACESSÍVEL -->
         <li class="modo-item">
@@ -31,6 +50,7 @@
             tabindex="0"
             role="button"
             aria-label="Alternar tema claro e escuro"
+            title="Alterar modo claro/escuro"
           >
             <div class="indicador"></div>
           </div>
@@ -45,6 +65,7 @@
       tabindex="0"
       role="button"
       aria-label="Abrir ou fechar o menu"
+      title="Abrir ou fechar o menu"
     >
       <span></span>
       <span></span>
@@ -58,16 +79,25 @@
         alt="Foto de Bruno Freires"
         class="foto-perfil"
         tabindex="0"
+        title="Foto de Bruno Freires"
       />
-      <h1 tabindex="0">Bruno Freires</h1>
-      <p class="cabecalho-sub-titulo" tabindex="0">Desenvolvedor Front-End</p>
+      <h1 tabindex="0" title="Nome: Bruno Freires">Bruno Freires</h1>
+      <p
+        class="cabecalho-sub-titulo"
+        tabindex="0"
+        title="Profissão: Desenvolvedor Front-End"
+      >
+        Desenvolvedor Front-End
+      </p>
     </main>
 
     <!-- =============== SOBRE =============== -->
     <section id="sobre" class="sobre">
-      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <h2 class="sobre-titulo" title="Seção Sobre Mim" tabindex="0">
+        Sobre Mim
+      </h2>
       <div class="sobre-caixa">
-        <p class="sobre-paragrafo">
+        <p class="sobre-paragrafo" title="Texto sobre mim" tabindex="0">
           Sou um desenvolvedor apaixonado por tecnologia, fascinado pelo poder
           da programação e pelo impacto que ela pode gerar. Cada linha de código
           que escrevo é um passo para transformar ideias em realidade.
@@ -77,20 +107,24 @@
 
     <!-- =============== PROJETOS =============== -->
     <section id="projetos" class="projetos">
-      <h2 class="projetos-titulo">Meus Projetos</h2>
-      <h3 class="aviso">Clique na imagem e veja os repositórios</h3>
+      <h2 class="projetos-titulo" title="Meus Projetos">Meus Projetos</h2>
+      <h3 class="aviso" title="Clique nas imagens para abrir os repositórios">
+        Clique na imagem e veja os repositórios
+      </h3>
 
       <div class="projetos-caixa">
         <!-- Projeto 1 -->
         <a
           href="https://github.com/FreiresBruno/projeto-web.git"
           class="projeto-link1"
+          title="Abrir repositório do projeto Pizzaria Cowabunga"
         >
           <div class="projetos-card">
             <img
               src="./imagens/img1.png"
-              alt="Pizzaria Cowabunga - Projeto em grupo"
+              alt="Imagem do projeto Pizzaria Cowabunga"
               class="projetos-imagem"
+              title="Projeto Pizzaria Cowabunga"
             />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Pizzaria Cowabunga</h3>
@@ -105,12 +139,14 @@
         <a
           href="https://github.com/FreiresBruno/tincphp.git"
           class="projeto-link2"
+          title="Abrir repositório do projeto Chuleta Quenta"
         >
           <div class="projetos-card">
             <img
               src="./imagens/img2.png"
-              alt="Chuleta Quenta - Projeto em PHP"
+              alt="Imagem do projeto Chuleta Quenta em PHP"
               class="projetos-imagem"
+              title="Projeto Chuleta Quenta"
             />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Chuleta Quenta</h3>
@@ -125,12 +161,14 @@
         <a
           href="https://github.com/FreiresBruno/offwhite-aprendendo-modo-recursivo.git"
           class="projeto-link3"
+          title="Abrir repositório do projeto Site Off-White"
         >
           <div class="projetos-card">
             <img
               src="./imagens/img3.jpg"
-              alt="Site Off-White - Projeto de HTML e CSS"
+              alt="Imagem do site Off-White"
               class="projetos-imagem"
+              title="Projeto Site Off-White"
             />
             <div class="caixa-textos-projeto">
               <h3 class="info-projetos">Site Off-White</h3>
@@ -145,7 +183,9 @@
 
     <!-- =============== CONTATO =============== -->
     <section id="contatos" class="contatos">
-      <h2 class="contatos-titulo">Entre em Contato</h2>
+      <h2 class="contatos-titulo" title="Entre em contato comigo">
+        Entre em Contato
+      </h2>
 
       <form
         class="formulario-contato"
@@ -154,25 +194,35 @@
         aria-label="Formulário de contato"
       >
         <div class="grupo-form">
+          <label for="nome" class="sr-only">Seu nome</label>
           <input
             placeholder="Nome"
             class="campo-form"
             id="nome"
             aria-label="Seu nome"
+            title="Digite seu nome"
           />
         </div>
 
         <div class="grupo-form">
+          <label for="mensagem" class="sr-only">Digite sua mensagem</label>
           <textarea
             class="campo-form"
             placeholder="Digite sua mensagem"
             rows="6"
             id="mensagem"
             aria-label="Sua mensagem"
+            title="Digite sua mensagem"
           ></textarea>
         </div>
 
-        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        <button
+          type="submit"
+          class="botao-form"
+          title="Enviar mensagem pelo WhatsApp"
+        >
+          Enviar WhatsApp
+        </button>
       </form>
     </section>
 
@@ -186,6 +236,7 @@
             href="https://github.com/FreiresBruno"
             target="_blank"
             aria-label="GitHub de Bruno Freires"
+            title="Abrir GitHub"
           >
             <img src="./imagens/Github.png" alt="Logotipo do GitHub" />
           </a>
@@ -196,6 +247,7 @@
             href="https://www.linkedin.com/in/bruno-eduardo-f-6b53a8250"
             target="_blank"
             aria-label="LinkedIn de Bruno Freires"
+            title="Abrir LinkedIn"
           >
             <img src="./imagens/linkedn.png" alt="Logotipo do LinkedIn" />
           </a>
@@ -206,6 +258,7 @@
             href="https://www.instagram.com/bfreires_"
             target="_blank"
             aria-label="Instagram de Bruno Freires"
+            title="Abrir Instagram"
           >
             <img
               src="./imagens/instagram-logo.png"
@@ -238,24 +291,27 @@
       const menuLinks = document.querySelectorAll(".menu-link");
 
       // Inicialmente desativa TAB nos links mobile
-      menuLinks.forEach(link => link.setAttribute("tabindex", "-1"));
+      menuLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
 
       // Abre/fecha menu e ajusta tabindex
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         menu.classList.toggle("active");
 
-        menuLinks.forEach(link => {
-          link.setAttribute("tabindex", menu.classList.contains("active") ? "0" : "-1");
+        menuLinks.forEach((link) => {
+          link.setAttribute(
+            "tabindex",
+            menu.classList.contains("active") ? "0" : "-1"
+          );
         });
       });
 
       // Fecha menu ao clicar em algum link
-      menuLinks.forEach(link => {
+      menuLinks.forEach((link) => {
         link.addEventListener("click", () => {
           hamburger.classList.remove("active");
           menu.classList.remove("active");
-          menuLinks.forEach(link => link.setAttribute("tabindex", "-1"));
+          menuLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
         });
       });
 
@@ -270,27 +326,27 @@
 
     <!-- DARK/LIGHT MODE -->
     <script>
-      const trilho = document.getElementById('trilho');
+      const trilho = document.getElementById("trilho");
       const body = document.body;
 
-      const temaSalvo = localStorage.getItem('tema');
+      const temaSalvo = localStorage.getItem("tema");
       if (temaSalvo) {
         body.className = temaSalvo;
-        trilho.classList.toggle('dark', temaSalvo === 'light');
+        trilho.classList.toggle("dark", temaSalvo === "light");
       } else {
-        body.classList.add('dark');
-        trilho.classList.remove('dark');
+        body.classList.add("dark");
+        trilho.classList.remove("dark");
       }
 
-      trilho.addEventListener('click', () => {
-        if (body.classList.contains('dark')) {
-          body.classList.replace('dark', 'light');
-          trilho.classList.add('dark');
-          localStorage.setItem('tema', 'light');
+      trilho.addEventListener("click", () => {
+        if (body.classList.contains("dark")) {
+          body.classList.replace("dark", "light");
+          trilho.classList.add("dark");
+          localStorage.setItem("tema", "light");
         } else {
-          body.classList.replace('light', 'dark');
-          trilho.classList.remove('dark');
-          localStorage.setItem('tema', 'dark');
+          body.classList.replace("light", "dark");
+          trilho.classList.remove("dark");
+          localStorage.setItem("tema", "dark");
         }
       });
 
@@ -303,6 +359,7 @@
       });
     </script>
 
+    <!-- FOCOS VISÍVEIS -->
     <style>
       /* Foco visível no hambúrguer */
       .hamburger:focus-visible {
@@ -324,5 +381,36 @@
         outline: 3px solid #111;
       }
     </style>
+    <script>
+    // Seleciona os elementos da barra de navegação e o logotipo do Instagram
+const navLinks = document.querySelectorAll(".menu-link");
+const instagramLogo = document.querySelector(".instagram a");
+
+// Adiciona um evento ao logotipo do Instagram para voltar ao primeiro link da navbar
+instagramLogo.addEventListener("keydown", (e) => {
+  if (e.key === "Tab" && !e.shiftKey) {
+    e.preventDefault(); // Impede o comportamento padrão do Tab
+    navLinks[0].focus(); // Foca no primeiro link da navbar (Início)
+  }
+});
+
+// Adiciona um evento ao último link da navbar para voltar ao Instagram ao pressionar Shift+Tab
+navLinks[navLinks.length - 1].addEventListener("keydown", (e) => {
+  if (e.key === "Tab" && e.shiftKey) {
+    e.preventDefault(); // Impede o comportamento padrão do Shift+Tab
+    instagramLogo.focus(); // Foca no logotipo do Instagram
+  }
+});
+
+// Garante que o foco passe por todos os links da navbar
+navLinks.forEach((link, index) => {
+  link.addEventListener("keydown", (e) => {
+    if (e.key === "Tab" && !e.shiftKey && index === navLinks.length - 1) {
+      e.preventDefault(); // Impede o comportamento padrão do Tab no último link
+      instagramLogo.focus(); // Foca no logotipo do Instagram
+    }
+  });
+});
+    </script>
   </body>
 </html>

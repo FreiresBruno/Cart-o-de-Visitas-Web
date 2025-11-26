@@ -49,7 +49,7 @@ h1, h2, h3 {
    RODAPÉ UNIFICADO
 ========================= */
 .rodape {
-  background-color: rgba(15, 23, 42, 0.8); /* fundo com leve transparência */
+  background-color: rgba(15, 23, 42, 0.8);
   color: var(--claro);
   text-align: center;
   padding: 2rem 1rem;
@@ -63,7 +63,6 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-/* Lista de ícones */
 .rodape ul {
   display: flex;
   justify-content: center;
@@ -74,28 +73,24 @@ h1, h2, h3 {
   margin: 1rem auto 0 auto;
 }
 
-/* Ícones do rodapé */
 .rodape ul li img {
-  width: 3.5rem;       /* tamanho padrão */
+  width: 3.5rem;
   height: 3.5rem;
-  border-radius: 50%;  /* cantos arredondados */
+  border-radius: 50%;
   object-fit: contain;
   transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
 }
 
-/* Hover nos ícones */
 .rodape ul li img:hover {
   transform: scale(1.15);
   filter: brightness(1.2);
   box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
 }
 
-/* GitHub maior */
 .rodape ul li.github img {
   width: 6.5rem;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .rodape ul {
     gap: 1.5rem;
@@ -128,11 +123,9 @@ h1, h2, h3 {
   }
 }
 
-
-/* Efeito hover para todos os ícones */
 .rodape ul li img:hover {
-  transform: scale(1.15);                     /* Leve aumento */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  transform: scale(1.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================
@@ -301,6 +294,7 @@ body.light .rodape {
     display: flex;
   }
 }
+
 /* =========================
    RESPONSIVO CORRIGIDO
 ========================= */
@@ -309,7 +303,6 @@ body.light .rodape {
     justify-content: space-between;
   }
 
-  /* Hamburger visível */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -324,15 +317,14 @@ body.light .rodape {
     border-radius: 5px;
   }
 
-  /* Menu escondido por padrão */
   .menu {
-    display: none; /* esconde menu no celular */
-    flex-direction: column; /* lista vertical */
+    display: none;
+    flex-direction: column;
     background-color: var(--maisEscuro);
     position: absolute;
-    top: 60px; /* abaixo da nav */
-    right: 0; /* alinha à direita */
-    width: 100%; /* ocupa largura total da tela */
+    top: 60px;
+    right: 0;
+    width: 100%;
     padding: 1rem;
     border-radius: 0 0 10px 10px;
     gap: 1rem;
@@ -340,12 +332,10 @@ body.light .rodape {
     z-index: 99;
   }
 
-  /* Menu visível quando ativo */
   .menu.show {
     display: flex;
   }
 
-  /* Links maiores e centralizados no menu mobile */
   .menu li a {
     display: block;
     width: 100%;
@@ -354,7 +344,6 @@ body.light .rodape {
   }
 }
 
-/* Pequenas telas extra (celulares bem pequenos) */
 @media screen and (max-width: 480px) {
   .menu {
     top: 55px;
@@ -365,7 +354,6 @@ body.light .rodape {
     font-size: 0.9rem;
   }
 }
-
 
 /* =========================
    ESTILO SWITCH DARK/LIGHT
@@ -396,12 +384,18 @@ body.light .rodape {
 }
 
 .trilho.dark .bola {
-  left: 26px; /* bola desliza para a direita */
+  left: 26px;
 }
+
+/* =========================
+   FOCUS (TAB) CORRIGIDO
+========================= */
 *:focus {
-  outline: 2px dashed #0077ff;
+  outline: 2px solid #0077ff;
   outline-offset: 4px;
+  border-radius: 6px;
 }
+
 /* =========================
    MENU RESPONSIVO FINAL
 ========================= */
@@ -411,7 +405,6 @@ body.light .rodape {
     justify-content: space-between;
   }
 
-  /* Hamburger visível */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -426,12 +419,11 @@ body.light .rodape {
     border-radius: 5px;
   }
 
-  /* Menu mobile */
   .menu {
     display: none;
     flex-direction: column;
-    align-items: center;         /* centraliza */
-    justify-content: center;     /* centraliza */
+    align-items: center;
+    justify-content: center;
     background-color: var(--maisEscuro);
     position: absolute;
     top: 60px;
@@ -449,7 +441,6 @@ body.light .rodape {
     display: flex;
   }
 
-  /* Itens um abaixo do outro e centralizados */
   .menu li {
     width: 100%;
   }
@@ -463,7 +454,6 @@ body.light .rodape {
   }
 }
 
-/* Extra-small devices */
 @media screen and (max-width: 480px) {
 
   .menu {
